@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Digit Game</title>
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+    <header></header>
+
+    <div class="bg-image">
+        <div class="circle-fill"></div>
+        <div class="circle-outline"></div>
+        <div class="circle-outline"></div>
+        <div class="circle-outline"></div>
+        <div class="circle-outline"></div>
+        <img src="../static/images/bg-img.svg" alt="">
+        <div class="star-count">
+            <img src="../static/images/star-count-img.svg" alt="">
+            <div class="star-count-number active">
+                <span id="star-count">0</span>
+                <img id="star-img" src="../static/images/star-fill.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-3">
+                    <div class="left-box">
+                        <div class="left-box-title">
+                            <h1>Hi, my friend!</h1>
+                            <span>Let's play</span>
+                            <img src="../static/images/left-box-img.svg" alt="">
+                        </div>
+                        <div class="left-box-text">
+                            <h3>Let's learn how to count together!</h3>
+                            <p>Learn to <span>write</span> numbers</p>
+                            <p>Learn to <span>count</span> sets of objects</p>
+                            <p>Learn to <span>addition and subtraction</span> numbers</p>
+                        </div>
+                        <p>Good luck!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div id="main-box" class="main-box">
+
+                        <div class="card">
+                            <div class="card-text">
+                                Write the number
+                            </div>
+                            <div class="card-task">
+                                <img src="../static/images/task1.png" alt="">
+                            </div>
+                            <div class="card-draw">
+                                <canvas id="card1-canvas" width="150" height="150" data-answer="3"></canvas>
+                            </div>
+                            <div class="card-result">
+                                <img id="card1-spinner" src="../static/images/spinner.svg">
+                                <button id="card1-button" onclick="predict(1)">
+                                    Test
+                                    <img src="../static/images/arrow-right.svg" alt="">
+                                </button>
+                                <a id="card1-link" href="javascript:clear(1)">Clear</a>
+                                <p id="card1-result"></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-text">
+                                How many planets are in the picture?
+                            </div>
+                            <div class="card-task">
+                                <img src="../static/images/task2.png" alt="">
+                            </div>
+                            <div class="card-draw">
+                                <canvas id="card2-canvas" width="150" height="150" data-answer="8"></canvas>
+                            </div>
+                            <div class="card-result">
+                                <img id="card2-spinner" src="../static/images/spinner.svg">
+                                <button id="card2-button" onclick="predict(2)">
+                                    Test
+                                    <img src="../static/images/arrow-right.svg" alt="">
+                                </button>
+                                <a id="card2-link" href="javascript:clear(2)" >Clear</a>
+                                <p id="card2-result"></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-text">
+                                Solve the example
+                            </div>
+                            <div class="card-task">
+                                <img src="../static/images/task3.png" alt="">
+                            </div>
+                            <div class="card-draw">
+                                <canvas id="card3-canvas" width="150" height="150" data-answer="1"></canvas>
+                            </div>
+                            <div class="card-result">
+                                <img id="card3-spinner" src="../static/images/spinner.svg">
+                                <button id="card3-button" onclick="predict(3)">
+                                    Test
+                                    <img src="../static/images/arrow-right.svg" alt="">
+                                </button>
+                                <a id="card3-link" href="javascript:clear(3)" >Clear</a>
+                                <p id="card3-result"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="main-box-win" class="main-box-win">
+                        Great work!
+                        <img src="../static/images/star-img.svg" alt="">
+                        <a href="javascript:back()">Try again</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="../static/jquery.min.js"></script>
+	<script src="../static/script.js"></script>
+</body>
+
+</html>

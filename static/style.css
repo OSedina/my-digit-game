@@ -1,0 +1,495 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Regular.eot');
+    src: local('Inter Regular'), local('Inter-Regular'),
+         url('fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Inter-Regular.woff2') format('woff2'),
+         url('fonts/Inter-Regular.woff') format('woff'),
+         url('fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: #303733;
+}
+
+header {
+    height: 22px;
+    background: #6D51E4;
+    width: 100%;
+    z-index: 0;
+}
+
+header:before, header:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 22px;
+    z-index: 1;
+}
+
+header:before {
+    left: 0;
+    background: #B740CE;
+}
+
+header:after {
+    right: 0;
+    background: #FA026F;
+}
+
+footer {
+    height: 30px;
+    background: linear-gradient(274.5deg, #740CC5 14.51%, #9C2CF3 31.69%, #3A49F9 74.05%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.bg-image {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-image > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    z-index: 10;
+}
+
+.bg-image .circle-outline,
+.bg-image .circle-fill {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+.bg-image .circle-fill {
+    width: 800px;
+    height: 800px;
+    margin-bottom: -400px;
+    margin-right: -400px;
+    background: #8B70FD;
+}
+
+.bg-image .circle-outline {
+    border: 2px dashed rgba(125, 143, 171, 0.42);
+}
+
+.bg-image .circle-outline:nth-child(2) {
+    width: 600px;
+    height: 600px;
+    margin-bottom: -300px;
+    margin-right: -300px;
+    border-color: #ffffff;
+}
+
+.bg-image .circle-outline:nth-child(3) {
+    width: 770px;
+    height: 770px;
+    margin-bottom: -385px;
+    margin-right: -385px;
+    border-color: #ffffff;
+}
+
+.bg-image .circle-outline:nth-child(4) {
+    width: 900px;
+    height: 900px;
+    margin-bottom: -450px;
+    margin-right: -450px;
+}
+
+.bg-image .circle-outline:nth-child(5) {
+    width: 1100px;
+    height: 1100px;
+    margin-bottom: -550px;
+    margin-right: -550px;
+}
+
+.bg-image .star-count {
+    margin-bottom: 220px;
+    margin-right: 90px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bg-image .star-count > img {
+    width: 130px;
+}
+
+.bg-image .star-count-number {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 90px;
+    right: -20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #FD4674;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 12;
+}
+
+.bg-image .star-count-number img {
+    display: none;
+    position: absolute;
+    width: 30px;
+    left: 21px;
+    top: 18px;
+    animation: activeStarCount 0.2s  infinite normal;
+}
+
+.left-box {
+    background: #F5F5F5;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 80px 30px 60px;
+}
+
+.left-box h1 {
+   font-size: 27px;
+}
+
+.left-box h1 + span {
+   color: #7D8FAB;
+}
+
+.left-box > p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #303733;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.left-box-title {
+    position: relative;
+    padding-right: 40px;
+}
+
+.left-box-title img {
+    position: absolute;
+    bottom: -80px;
+    right: -90px;
+    width: 180px;
+    z-index: 10;
+}
+
+.left-box-text {
+    margin-top: 30px;
+    background: #ffffff;
+    padding: 15px 30px;
+    color: #7D8FAB;
+    font-size: 14px;
+    border-radius: 25px;
+}
+
+.left-box-text h3 {
+    font-size: 18px;
+}
+
+.left-box-text span {
+    color: #303733;
+    font-weight: 600;
+}
+
+.main-box {
+    transition: 0.5s ease;
+}
+
+.main-box-win {
+    background: #FBFAFA;
+    box-shadow: rgba(9, 30, 66, 0.25) 0 4px 8px -2px, rgba(9, 30, 66, 0.08) 0 0 0 1px;
+    padding: 70px 40px;
+    border-radius: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: #FD4674;
+    transition: 0.5s ease;
+    margin-top: 30px;
+}
+
+.main-box-win a {
+    color: #6D51E4;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.main-box-win img {
+    width: 200px;
+}
+
+.card {
+    background: #FBFAFA;
+    box-shadow: rgba(9, 30, 66, 0.25) 0 4px 8px -2px, rgba(9, 30, 66, 0.08) 0 0 0 1px;
+    border-radius: 30px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 200px;
+    padding: 0 40px;
+}
+
+.card > div {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .card-text {
+    width: calc(50% - 200px);
+}
+
+.card .card-task {
+    width: 200px;
+}
+
+.card .card-task img {
+    max-height: 120px;
+    max-width: 150px;
+}
+
+.card .card-draw {
+    width: 200px;
+}
+
+.card canvas {
+    border: 1px solid #dbdbdb;
+    border-radius: 30px;
+    margin: auto;
+    display: block;
+    touch-action: none;
+    background: #ffffff;
+}
+
+.card .card-result {
+    width: calc(50% - 200px);
+}
+
+.card .card-result button {
+    background: #6D51E4;
+    border-radius: 30px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    border: 1px solid #6D51E4;
+    transition: ease 0.2s;
+}
+
+.card .card-result button:hover {
+    background: #FD4674;
+    border: 1px solid #FD4674;
+}
+
+.card .card-result a {
+    color: #6D51E4;
+    cursor: pointer;
+    display: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.card .card-result > img {
+    display: none;
+}
+
+.card .card-result a:hover {
+    color: #FD4674;
+}
+
+.card .card-result p {
+    margin-top: 20px;
+    color: #7D8FAB;
+    line-height: 1;
+}
+
+.card .card-result p span {
+    font-size: 30px;
+    color: #303733;
+}
+
+.card .card-result button img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+@keyframes activeStarCount {
+    0% {
+        transform: scale(1)
+    }
+    30% {
+        transform: scale(1.5)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+@media screen and (max-width: 1399.98px) {
+    .left-box-title img {
+        width: 150px;
+        bottom: -30px;
+    }
+
+    .card {
+        padding: 0 15px;
+    }
+
+    .card .card-text {
+        width: calc(50% - 170px);
+    }
+
+    .card .card-task {
+        width: 140px;
+    }
+
+    .card .card-task img {
+        max-height: 120px;
+        max-width: 130px;
+    }
+
+    .card .card-result {
+        width: calc(50% - 170px);
+    }
+}
+
+@media screen and (max-width: 1199.98px) {
+    .left-box {
+        margin: 0 50px 40px;
+        padding: 20px 40px;
+    }
+
+    .left-box h1 {
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    .left-box-text {
+        margin-top: 10px;
+    }
+
+    .left-box-text p {
+        width: 300px;
+        display: inline-block;
+    }
+
+    .left-box-title img {
+        bottom: -230px;
+        width: 180px;
+    }
+
+    .main-box {
+        padding-bottom: 400px;
+    }
+
+    .main-box-win {
+        margin-bottom: 400px;
+    }
+
+    .card {
+        padding: 0 40px;
+    }
+
+    .card .card-text {
+        width: calc(50% - 200px);
+    }
+
+    .card .card-task {
+        width: 200px;
+    }
+
+    .card .card-task img {
+        max-height: 120px;
+        max-width: 150px;
+    }
+
+    .card .card-result {
+        width: calc(50% - 200px);
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .left-box-title img {
+        bottom: -300px;
+        width: 200px;
+    }
+
+    .left-box-text p {
+        width: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .card {
+        flex-wrap: wrap;
+    }
+
+    .card .card-text,
+    .card .card-result {
+        width: 100%;
+    }
+
+    .card .card-draw,
+    .card .card-task {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .left-box {
+        margin: 0 0 20px 0;
+        padding: 20px 40px;
+    }
+
+    .left-box-title img {
+        bottom: -360px;
+        width: 150px;
+        right: -45px;
+    }
+
+    .card .card-task img {
+        max-height: 120px;
+        max-width: 115px;
+    }
+}
