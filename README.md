@@ -2,7 +2,7 @@
 A Flask app for handwritten digit prediction.
 
 # Demo
-https://my-digit-game.herokuapp.com/
+https://app1.dem0-site.site/
 
 # Setup
 Python 3.9+ is required for compatability with all required modules
@@ -15,7 +15,7 @@ git clone https://github.com/OSedina/my-digit-game.git
 cd my-digit-game
 
 # Install required modules
-pip install -r requirements-main.txt
+pip install -r requirements.txt
 ```
 
 # Usage
